@@ -19,7 +19,7 @@ class RippleAnimation extends StatefulWidget {
   const RippleAnimation({
     Key? key,
     required this.child,
-    required this.color,
+    this.color = Colors.red,
     this.delay = const Duration(milliseconds: 0),
     this.repeat = false,
     this.minRadius = 60,
@@ -55,7 +55,7 @@ class _RippleAnimationState extends State<RippleAnimation>
     return CustomPaint(
       painter: CirclePainter(
         _controller!,
-        color: widget.color ?? Colors.black,
+        color: widget.color,
         minRadius: widget.minRadius,
         wavesCount: widget.ripplesCount + 2,
       ),
