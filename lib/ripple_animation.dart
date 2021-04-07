@@ -86,7 +86,7 @@ class CirclePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Rect rect = Rect.fromLTRB(0.0, 0.0, size.width, size.height);
-    for (int wave = 0; wave <= wavesCount; wave++) {
+    for (int wave = 1; wave <= wavesCount + 1; wave++) {
       circle(canvas, rect, minRadius, wave, _animation.value, wavesCount);
     }
   }
